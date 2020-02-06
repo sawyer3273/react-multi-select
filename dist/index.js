@@ -147,6 +147,8 @@ var MultiSelect = function (_Component) {
                 shouldToggleOnHover = _props3.shouldToggleOnHover,
                 hasSelectAll = _props3.hasSelectAll,
                 overrideStrings = _props3.overrideStrings;
+                onMouseEnter = _props3.onMouseEnter;
+                onMouseLeave = _props3.onMouseLeave;
 
 
             return _react2.default.createElement(
@@ -170,6 +172,8 @@ var MultiSelect = function (_Component) {
                             filterOptions: filterOptions,
                             overrideStrings: overrideStrings
                         },
+                        onMouseEnter: onMouseEnter,
+                        onMouseLeave: onMouseLeave,
                         disabled: disabled
                     },
                     this.renderHeader()
