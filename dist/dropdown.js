@@ -49,6 +49,9 @@ var Dropdown = function (_Component) {
             hasFocus: false
         }, _this.handleDocumentClick = function (event) {
             if (_this.wrapper && !_this.wrapper.contains(event.target)) {
+                if (_this.setState.expanded) {
+                    _this.props.onClose && _this.props.onClose()
+                }
                 _this.setState({ expanded: false });
             }
         }, _this.handleKeyDown = function (e) {
@@ -109,6 +112,9 @@ var Dropdown = function (_Component) {
             }
 
             var newExpanded = value === undefined ? !expanded : !!value;
+            if (newExpanded == false) {
+                _this.props.onClose && _this.props.onClose()
+            }
 
             _this.setState({ expanded: newExpanded });
 

@@ -112,7 +112,7 @@ class Dropdown extends Component<Props, State> {
         }
 
         const newExpanded = value === undefined ? !expanded : !!value;
-
+        
         this.setState({expanded: newExpanded});
 
         if (!newExpanded && this.wrapper) {
