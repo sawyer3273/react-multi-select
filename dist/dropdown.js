@@ -88,10 +88,10 @@ var Dropdown = function (_Component) {
             }
         }, _this.handleMouseEnter = function (e) {
             _this.handleHover(true);
-            _this.props.onMouseEnter();
+            _this.props.onMouseEnter && _this.props.onMouseEnter();
         }, _this.handleMouseLeave = function (e) {
             _this.handleHover(false);
-            _this.props.onMouseLeave();
+            _this.props.onMouseLeave && _this.props.onMouseLeave();
         }, _this.handleHover = function (toggleExpanded) {
             var shouldToggleOnHover = _this.props.shouldToggleOnHover;
 
