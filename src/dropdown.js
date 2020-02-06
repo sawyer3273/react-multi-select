@@ -16,6 +16,8 @@ type Props = {
     disabled?: boolean,
     shouldToggleOnHover?: boolean
     labelledBy?: string,
+    onMouseEnter?:() => void,
+    onMouseLeave?:() => void,
 };
 
 type State = {
@@ -84,10 +86,12 @@ class Dropdown extends Component<Props, State> {
     }
 
     handleMouseEnter = (e: {target: any}) => {
+        this.props.onMouseEnter();
         this.handleHover(true);
     }
 
     handleMouseLeave = (e: {target: any}) => {
+        this.props.onMouseLeave();
         this.handleHover(false);
     }
 

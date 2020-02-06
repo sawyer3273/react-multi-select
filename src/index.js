@@ -40,7 +40,9 @@ type Props = {
     hasSelectAll: boolean,
     filterOptions?: (options: Array<Option>, filter: string) => Array<Option>,
     overrideStrings?: {[string]: string},
-    labelledBy: string
+    labelledBy: string,
+    onMouseEnter?:() => void,
+    onMouseLeave?:() => void,
 };
 
 class MultiSelect extends Component<Props> {
@@ -117,6 +119,8 @@ class MultiSelect extends Component<Props> {
             hasSelectAll,
             overrideStrings,
             labelledBy,
+            onMouseEnter,
+            onMouseLeave,
         } = this.props;
 
         return <div className="multi-select">
@@ -136,6 +140,8 @@ class MultiSelect extends Component<Props> {
                     filterOptions,
                     overrideStrings,
                 }}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
                 disabled={disabled}
                 labelledBy={labelledBy}
             >
