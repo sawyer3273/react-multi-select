@@ -150,8 +150,8 @@ var MultiSelect = function (_Component) {
                 filterOptions = _props3.filterOptions,
                 shouldToggleOnHover = _props3.shouldToggleOnHover,
                 hasSelectAll = _props3.hasSelectAll,
-                overrideStrings = _props3.overrideStrings;
-                onMouseEnter = _props3.onMouseEnter;
+                overrideStrings = _props3.overrideStrings,
+                onMouseEnter = _props3.onMouseEnter,
                 onMouseLeave = _props3.onMouseLeave;
 
 
